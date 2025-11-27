@@ -26,7 +26,7 @@ function Home() {
                 letterSpacing: '1px',
                 cursor: 'pointer',
                 transition: 'color 0.3s ease',
-                padding:'20px'
+                padding: '20px'
               }}
               onMouseEnter={e => { e.currentTarget.style.color = '#4682B4'; }}
               onMouseLeave={e => { e.currentTarget.style.color = ''; }}
@@ -63,7 +63,7 @@ function Home() {
         <div
           style={{
             position: 'absolute',
-            top: '40%',
+            top: '60%', // moved a bit up from 65%
             left: '50%',
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
@@ -130,6 +130,19 @@ function Home() {
               @keyframes slide {
                 0% { transform: translateX(-100%) skewX(-20deg); }
                 100% { transform: translateX(100%) skewX(-20deg); }
+              }
+
+              /* Responsive adjustments */
+              @media (max-width: 768px) {
+                h1 { font-size: 3rem; }
+                p { font-size: 1rem; }
+                button { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
+              }
+
+              @media (max-width: 480px) {
+                h1 { font-size: 2.2rem; }
+                p { font-size: 0.9rem; }
+                button { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
               }
             `}
           </style>
