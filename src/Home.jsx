@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import BubbleMenu from './homeComponents/NavBar';
 import FloatingLines from './homeComponents/HeroBg';
-import VariableProximity from './homeComponents/BgText';
 
 const items = [
   { label: 'home', href: '#', ariaLabel: 'Home', rotation: -8, hoverStyles: { bgColor: '#4682B4', textColor: '#ffffff' } },
@@ -12,7 +11,6 @@ const items = [
 ];
 
 function Home() {
-  const headingRef = useRef(null);
   const containerRef = useRef(null);
 
   return (
@@ -27,7 +25,8 @@ function Home() {
                 fontSize: '22px',
                 letterSpacing: '1px',
                 cursor: 'pointer',
-                transition: 'color 0.3s ease'
+                transition: 'color 0.3s ease',
+                padding:'20px'
               }}
               onMouseEnter={e => { e.currentTarget.style.color = '#4682B4'; }}
               onMouseLeave={e => { e.currentTarget.style.color = ''; }}
@@ -73,21 +72,17 @@ function Home() {
           }}
         >
           {/* Heading */}
-          <VariableProximity
-            ref={headingRef}
-            label="EKHOFUTUR"
-            fromFontVariationSettings="'wght' 400"
-            toFontVariationSettings="'wght' 900"
-            containerRef={containerRef}
-            style={{ fontSize: '4rem', color: '#000000' }}
-          />
+          <h1 style={{ fontSize: '4rem', fontWeight: '900', lineHeight: 1.1, marginBottom: '1rem' }}>
+            <span style={{ color: '#000000' }}>EKHO</span>{' '}
+            <span style={{ color: '#6B7280' }}>FUTUR</span>
+          </h1>
 
           {/* Short description */}
           <p
             style={{
               marginTop: '1rem',
               fontSize: '1.2rem',
-              color: '#000000', // black text
+              color: '#000000',
               maxWidth: '600px',
               marginLeft: 'auto',
               marginRight: 'auto',
@@ -104,7 +99,7 @@ function Home() {
               padding: '0.8rem 2rem',
               fontSize: '1rem',
               fontWeight: '600',
-              border: '2px solid #6B7280', // Concreate Gray
+              border: '2px solid #6B7280',
               borderRadius: '8px',
               background: 'transparent',
               color: '#6B7280',
