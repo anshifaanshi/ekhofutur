@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import BubbleMenu from "./homeComponents/NavBar";
 import HeroSection from "./homeComponents/HeroBg";
-
+import Gallery from "./homeComponents/Gallery";
+import WhatWeDoSection from "./homeComponents/WhatWeDoSection";
 // MENU ITEMS
 const items = [
   { label: "home", href: "#", rotation: -8 },
@@ -188,6 +189,17 @@ function Home() {
           </div>
         </div>
       </div>
+      <div className="w-full bg-white text-black">
+      {/* What We Do Section */}
+      <section className="px-4 sm:px-8 lg:px-16 py-12 sm:py-16 lg:py-24">
+        <WhatWeDoSection />
+      </section>
+
+      {/* Gallery Section */}
+      <section className="px-4 sm:px-8 lg:px-16 py-12 sm:py-16 lg:py-24 bg-white">
+        <Gallery />
+      </section>
+    </div>
     </>
   );
 }
