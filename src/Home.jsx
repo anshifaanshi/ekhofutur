@@ -1,6 +1,7 @@
+
 import React, { useEffect, useState } from "react";
 import BubbleMenu from "./homeComponents/NavBar";
-import HomeCarousel from "./homeComponents/HeroBg";
+import HeroSection from "./homeComponents/HeroBg";
 
 // MENU ITEMS
 const items = [
@@ -168,7 +169,7 @@ function Home() {
       >
         {/* HERO SECTION */}
         <div style={{ position: "relative", height: "100vh" }}>
-          <HomeCarousel services={services} />
+          <HeroSection />
 
           {/* Navbar */}
           <div style={{ position: "absolute", top: 0, width: "100%" }}>
