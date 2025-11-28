@@ -1,13 +1,53 @@
-import React, { useEffect, useState } from 'react';
-import BubbleMenu from './homeComponents/NavBar';
-import HomeCarousel from './homeComponents/HeroBg';
+import React, { useEffect, useState } from "react";
+import BubbleMenu from "./homeComponents/NavBar";
+import HomeCarousel from "./homeComponents/HeroBg";
 
+// MENU ITEMS
 const items = [
-  { label: 'home', href: '#', ariaLabel: 'Home', rotation: -8, hoverStyles: { bgColor: '#4682B4', textColor: '#ffffff' } },
-  { label: 'about', href: '#', ariaLabel: 'About', rotation: 8, hoverStyles: { bgColor: '#4682B4', textColor: '#ffffff' } },
-  { label: 'projects', href: '#', ariaLabel: 'Projects', rotation: 8, hoverStyles: { bgColor: '#4682B4', textColor: '#ffffff' } },
-  { label: 'blog', href: '#', ariaLabel: 'Blog', rotation: 8, hoverStyles: { bgColor: '#4682B4', textColor: '#ffffff' } },
-  { label: 'contact', href: '#', ariaLabel: 'Contact', rotation: -8, hoverStyles: { bgColor: '#4682B4', textColor: '#ffffff' } }
+  { label: "home", href: "#", rotation: -8 },
+  { label: "about", href: "#", rotation: 8 },
+  { label: "projects", href: "#", rotation: 8 },
+  { label: "blog", href: "#", rotation: 8 },
+  { label: "contact", href: "#", rotation: -8 },
+];
+
+// SERVICES DATA
+const services = [
+  {
+    title: "Old School",
+    description: "Timeless elegance with classic design principles.",
+    image: "/images/oldschool.jpg",
+  },
+  {
+    title: "Trend Setter",
+    description: "Cutting-edge designs that define the future.",
+    image: "https://i.postimg.cc/DZNFN69f/trendsetter-jpg.jpg",
+  },
+  {
+    title: "Lubnas Dental Studio",
+    description: "Modern professional dental care.",
+    image: "https://i.postimg.cc/SxmsCTkY/dental-jpg.jpg",
+  },
+  {
+    title: "Home Appliances",
+    description: "Stylish and functional home appliances.",
+    image: "/images/appliances.jpg",
+  },
+  {
+    title: "Builders & Realtors",
+    description: "Construction and real estate solutions.",
+    image: "https://i.postimg.cc/zBTZdNkm/builders-jpg.jpg",
+  },
+  {
+    title: "Co Working Space",
+    description: "Collaborative workspaces for creativity.",
+    image: "https://i.postimg.cc/RVBVxs3d/coworking.jpg",
+  },
+  {
+    title: "Home Stays & Wellness Center",
+    description: "Comfort + wellness for body & mind.",
+    image: "https://i.postimg.cc/pXCxb2bC/cardio-equipment-area-in-gym-center.jpg",
+  },
 ];
 
 function Home() {
@@ -17,7 +57,6 @@ function Home() {
 
   const fullText = "WELCOME TO EKHOFUTUR";
 
-  // Typing + Erasing Animation
   useEffect(() => {
     let i = 0;
     let isErasing = false;
@@ -25,7 +64,7 @@ function Home() {
     const interval = setInterval(() => {
       if (!isErasing) {
         if (i < fullText.length) {
-          setText(fullText.substring(0, i + 1));
+          setText(fullText.slice(0, i + 1));
           setLineWidth(((i + 1) / fullText.length) * 60);
           i++;
         } else {
@@ -33,7 +72,7 @@ function Home() {
         }
       } else {
         if (i > 0) {
-          setText(fullText.substring(0, i - 1));
+          setText(fullText.slice(0, i - 1));
           setLineWidth(((i - 1) / fullText.length) * 60);
           i--;
         } else {
@@ -50,55 +89,73 @@ function Home() {
     <>
       {/* INTRO SCREEN */}
       {showIntro && (
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            background: '#4682B4',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            zIndex: 9999,
-            color: '#ffffff',
-            letterSpacing: '3px',
-            transition: 'opacity 1s ease',
-            opacity: showIntro ? 1 : 0,
-          }}
-        >
-          <h1
-            style={{
-              fontSize: '3rem',
-              fontWeight: '900',
-              animation: 'zoom 1.2s ease',
-              marginBottom: '10px'
-            }}
-          >
-            {text}
-          </h1>
+        <div className="intro-screen">
+          <h1 className="intro-text">{text}</h1>
+          <div className="intro-bar" style={{ width: `${lineWidth}%` }}></div>
 
-          <div
-            style={{
-              height: '4px',
-              background: '#FFD700',
-              width: `${lineWidth}%`,
-              maxWidth: '300px',
-              transition: 'width 0.15s linear',
-              borderRadius: '4px'
-            }}
-          ></div>
+          <style jsx>{`
+            .intro-screen {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: #4682b4;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              z-index: 9999;
+              color: #ffffff;
+              letter-spacing: 3px;
+              transition: opacity 1s ease;
+              padding: 0 10px;
+              box-sizing: border-box;
+            }
 
-          <style>
-            {`
-              @keyframes zoom {
-                0% { transform: scale(0.8); opacity: 0; }
-                100% { transform: scale(1); opacity: 1; }
+            .intro-text {
+              font-size: 8vw; /* Responsive font */
+              font-weight: 900;
+              animation: zoom 1.2s ease;
+              text-align: center;
+            }
+
+            .intro-bar {
+              height: 4px;
+              background: #ffd700;
+              max-width: 300px;
+              transition: width 0.15s linear;
+              border-radius: 4px;
+              margin-top: 10px;
+            }
+
+            @keyframes zoom {
+              0% {
+                transform: scale(0.8);
+                opacity: 0;
               }
-            `}
-          </style>
+              100% {
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
+
+            /* MOBILE ADJUSTMENTS */
+            @media (max-width: 768px) {
+              .intro-text {
+                font-size: 10vw;
+              }
+            }
+
+            @media (max-width: 480px) {
+              .intro-text {
+                font-size: 12vw;
+              }
+              .intro-bar {
+                max-width: 200px;
+              }
+            }
+          `}</style>
         </div>
       )}
 
@@ -106,63 +163,28 @@ function Home() {
       <div
         style={{
           opacity: showIntro ? 0 : 1,
-          transition: 'opacity 1.5s ease',
-          pointerEvents: showIntro ? 'none' : 'auto'
+          transition: "opacity 1.5s ease",
         }}
       >
-        {/* HERO SECTION WITH GRADIENT */}
-        <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
-          {/* Gradient blinds */}
-          <HomeCarousel />
+        {/* HERO SECTION */}
+        <div style={{ position: "relative", height: "100vh" }}>
+          <HomeCarousel services={services} />
 
-          {/* Navigation inside gradient */}
-          <div style={{ position: 'absolute', top: 0, width: '100%' }}>
+          {/* Navbar */}
+          <div style={{ position: "absolute", top: 0, width: "100%" }}>
             <BubbleMenu
               logo={
-                <span
-                  style={{
-                    fontWeight: 700,
-                    fontSize: '22px',
-                    letterSpacing: '1px',
-                    cursor: 'pointer',
-                    padding: '20px',
-                    transition: 'color 0.3s ease'
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.color = '#4682B4'; }}
-                  onMouseLeave={e => { e.currentTarget.style.color = ''; }}
-                >
-                  <span style={{ color: '#000000' }}>EKHO</span>
-                  <span style={{ color: '#6B7280' }}>FUTUR</span>
+                <span style={{ fontWeight: 700, fontSize: "22px" }}>
+                  <span style={{ color: "#000" }}>EKHO</span>
+                  <span style={{ color: "#6B7280" }}>FUTUR</span>
                 </span>
               }
               items={items}
               menuBg="transparent"
-              menuContentColor="#ffffff"
+              menuContentColor="#fff"
               useFixedPosition={true}
             />
           </div>
-
-          {/* Optional content in hero */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              textAlign: 'center',
-              color: '#ffffff'
-            }}
-          >
-          
-          </div>
-        </div>
-
-        {/* OTHER PAGE CONTENT */}
-        <div style={{ padding: '80px 40px', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '2rem', fontWeight: '700' }}>Other Content</h2>
-          <p style={{ marginTop: '10px', color: '#555' }}>
-            This is the rest of your page content.
-          </p>
         </div>
       </div>
     </>
