@@ -7,7 +7,7 @@ import AboutOurApps from "./homeComponents/AboutOurApps";
 import WorkflowSteps from "./homeComponents/WorkFlowStep";
 import Testimonials from "./homeComponents/Testimonials";
 import { TimelineDemo } from "./homeComponents/TimeLineDemo";
-
+import Footer from './homeComponents/Footer'
 
 
 function Home() {
@@ -55,6 +55,7 @@ function Home() {
       </section>
 
       <Testimonials />
+      <Footer/>
     </>
   );
 }
