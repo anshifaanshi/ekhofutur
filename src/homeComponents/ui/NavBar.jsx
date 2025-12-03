@@ -19,18 +19,17 @@ export default function RealEstateHero() {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <div className="flex gap-1">
-                <div className="w-8 h-8 border-t-4 border-l-4 border-blue-900 rounded-tl-lg"></div>
-                <div className="w-8 h-8 border-t-4 border-r-4 border-blue-900 rounded-tr-lg -ml-4"></div>
+           
               </div>
               <span className="text-2xl font-bold">
-                <span className="text-blue-900">Home</span>
-                <span className="text-yellow-500"> Unik</span>
+                <span className="text-[#4682B4]">Builders</span>
+                <span className="text-yellow-500"> &Realtors</span>
               </span>
             </div>
 
             {/* Navigation Links */}
             <div className="hidden md:flex items-center gap-8">
-              {["Home", "Services", "About", "Testimonial", "Blog"].map((item) => (
+              {["Home", "Services", "About"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -56,11 +55,8 @@ export default function RealEstateHero() {
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
         <div className="mb-8 flex items-center gap-2 text-white">
-          <div className="flex gap-1">
-            <div className="w-1 h-6 bg-white transform -skew-x-12"></div>
-            <div className="w-1 h-6 bg-white transform -skew-x-12"></div>
-          </div>
-          <span className="text-sm font-medium tracking-wider uppercase">Welcome to Home Unik</span>
+          
+         
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold text-white text-center mb-6 leading-tight">
