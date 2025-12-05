@@ -74,7 +74,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Creating modern dental solutions with clean, professional, and approachable aesthetics.
           </p>
-          <VisitButton to="/projects/lubnas-dental" />
+          <VisitButton to="/dental" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -152,7 +152,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Collaborative and vibrant co-working environments for creative and professional minds.
           </p>
-          <VisitButton to="/projects/co-working-space" />
+          <VisitButton to="/working" /> {/* <-- properly closed */}
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -204,7 +204,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Environmentally friendly and strategically placed EV charging stations.
           </p>
-          <VisitButton to="/projects/ev-stations" />
+          <VisitButton to="/ev" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
