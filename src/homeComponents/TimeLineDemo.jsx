@@ -3,16 +3,32 @@ import { Link } from "react-router-dom";
 import { Timeline } from "./TimeLine";
 
 export function TimelineDemo() {
-  // Reusable button using Link
-  const VisitButton = ({ to }) => (
-    <Link
-      to={to}
-      className="inline-block mb-4 px-4 py-2 bg-[#4682B4] text-white rounded-lg 
-      hover:bg-[#FFD700] hover:text-black transition-all duration-300"
-    >
-      Visit Website
-    </Link>
-  );
+  // VisitButton supports internal + external links automatically
+  const VisitButton = ({ to }) => {
+    const isExternal = to.startsWith("http");
+
+    if (isExternal) {
+      return (
+        <a
+          href={to}
+          className="inline-block mb-4 px-4 py-2 bg-[#4682B4] text-white rounded-lg 
+          hover:bg-[#FFD700] hover:text-black transition-all duration-300"
+        >
+          Visit Website
+        </a>
+      );
+    }
+
+    return (
+      <Link
+        to={to}
+        className="inline-block mb-4 px-4 py-2 bg-[#4682B4] text-white rounded-lg 
+        hover:bg-[#FFD700] hover:text-black transition-all duration-300"
+      >
+        Visit Website
+      </Link>
+    );
+  };
 
   const timelineItems = [
     {
@@ -41,6 +57,7 @@ export function TimelineDemo() {
         </div>
       ),
     },
+
     {
       title: "Trend Setter",
       content: (
@@ -48,7 +65,9 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Innovative and ahead of the curve, we create designs that set trends in the industry.
           </p>
+
           <VisitButton to="/projects/trend-setter" />
+
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -67,6 +86,7 @@ export function TimelineDemo() {
         </div>
       ),
     },
+
     {
       title: "Lubnas Dental Studio",
       content: (
@@ -74,7 +94,10 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Creating modern dental solutions with clean, professional, and approachable aesthetics.
           </p>
-          <VisitButton to="/dental" />
+
+          {/* Updated link — opens in SAME tab */}
+          <VisitButton to="https://coruscating-blancmange-28365c.netlify.app/" />
+
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -93,6 +116,7 @@ export function TimelineDemo() {
         </div>
       ),
     },
+
     {
       title: "Home Appliances",
       content: (
@@ -119,6 +143,7 @@ export function TimelineDemo() {
         </div>
       ),
     },
+
     {
       title: "Builders & Realtors",
       content: (
@@ -145,6 +170,7 @@ export function TimelineDemo() {
         </div>
       ),
     },
+
     {
       title: "Co Working Space",
       content: (
@@ -152,7 +178,10 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Collaborative and vibrant co-working environments for creative and professional minds.
           </p>
-          <VisitButton to="/working" /> {/* <-- properly closed */}
+
+          {/* Updated external coworking link, same tab */}
+          <VisitButton to="https://coworkingspace-psi.vercel.app/" />
+
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -171,6 +200,7 @@ export function TimelineDemo() {
         </div>
       ),
     },
+
     {
       title: "Home Stays & Wellness center",
       content: (
@@ -197,6 +227,7 @@ export function TimelineDemo() {
         </div>
       ),
     },
+
     {
       title: "EV Stations",
       content: (
