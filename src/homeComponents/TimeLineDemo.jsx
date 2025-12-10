@@ -95,7 +95,6 @@ export function TimelineDemo() {
             Creating modern dental solutions with clean, professional, and approachable aesthetics.
           </p>
 
-          {/* Updated link — opens in SAME tab */}
           <VisitButton to="https://coruscating-blancmange-28365c.netlify.app/" />
 
           <div className="grid grid-cols-2 gap-4">
@@ -179,7 +178,6 @@ export function TimelineDemo() {
             Collaborative and vibrant co-working environments for creative and professional minds.
           </p>
 
-          {/* Updated external coworking link, same tab */}
           <VisitButton to="https://coworkingspace-psi.vercel.app/" />
 
           <div className="grid grid-cols-2 gap-4">
@@ -228,6 +226,7 @@ export function TimelineDemo() {
       ),
     },
 
+    // ⭐ EV Section Fully Updated
     {
       title: "EV Stations",
       content: (
@@ -235,7 +234,16 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Environmentally friendly and strategically placed EV charging stations.
           </p>
-          <VisitButton to="/ev" />
+
+          {/* Direct Link instead of VisitButton */}
+          <Link
+            to="/ev"
+            className="inline-block mb-4 px-4 py-2 bg-[#4682B4] text-white rounded-lg 
+            hover:bg-[#FFD700] hover:text-black transition-all duration-300"
+          >
+            Visit Website
+          </Link>
+
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
