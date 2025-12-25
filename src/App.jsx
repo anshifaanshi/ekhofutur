@@ -5,6 +5,8 @@ import Home from "./Home";
 import Realtors from "./Realtors";
 import HomePage from "./working";
 import Ev from "./Ev";
+import Appliances from "./Appliances";
+import Fitness from "./Fitness";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/realtors" element={<Realtors />} />
         <Route path="/working" element={<HomePage/>}></Route>
     <Route path="/ev" element={<Ev/>}></Route>
+    <Route path='/appliances' element={<Appliances/>}></Route>
+    <Route path='/fitness' element={<Fitness/>}></Route>
       </Routes>
     </Router>
   );
