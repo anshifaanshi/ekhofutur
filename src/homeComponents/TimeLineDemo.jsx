@@ -38,7 +38,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Bringing back the classic touch with vintage designs and traditional workflows.
           </p>
-          <VisitButton to="https://oldschool-three.vercel.app/" />
+          <VisitButton to="/oldschool" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -64,7 +64,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Innovative and ahead of the curve, we create designs that set trends in the industry.
           </p>
-          <VisitButton to="https://trendsetter-three.vercel.app/" />
+          <VisitButton to="/trendsetter" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -90,7 +90,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Creating modern dental solutions with clean, professional, and approachable aesthetics.
           </p>
-          <VisitButton to="https://coruscating-blancmange-28365c.netlify.app/" />
+          <VisitButton to="/lubnas" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -116,7 +116,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Empowering growth and new beginnings through thoughtful services and design.
           </p>
-          <VisitButton to="https://trendsetter-three.vercel.app/" />
+          <VisitButton to="/speech" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -142,7 +142,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             High-quality, innovative home appliances designed for modern lifestyles.
           </p>
-          <VisitButton to="https://homeappliances-one.vercel.app/" />
+          <VisitButton to="/homeappliances" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -168,7 +168,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Enhancing spaces and products with thoughtful design and attention to detail.
           </p>
-          <VisitButton to="/projects/compliment" />
+          <VisitButton to="/compliment" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -240,31 +240,32 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Co Working Space",
-      content: (
-        <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
-            Collaborative and vibrant co-working environments for creative and professional minds.
-          </p>
-          <VisitButton to="https://coworkingspace-psi.vercel.app/" />
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
-            ].map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt="Co Working Space"
-                className="h-20 w-full rounded-lg object-cover md:h-44 lg:h-60 shadow-lg"
-              />
-            ))}
-          </div>
-        </div>
-      ),
-    },
+  title: "Co Working Space",
+  content: (
+    <div>
+      <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+        Collaborative and vibrant co-working environments for creative and professional minds.
+      </p>
+      <VisitButton to="/coworking" />
+      <div className="grid grid-cols-2 gap-4">
+        {[
+          "https://assets.aceternity.com/templates/startup-1.webp",
+          "https://assets.aceternity.com/templates/startup-2.webp",
+          "https://assets.aceternity.com/templates/startup-3.webp",
+          "https://assets.aceternity.com/templates/startup-4.webp",
+        ].map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt="Co Working Space"
+            className="h-20 w-full rounded-lg object-cover md:h-44 lg:h-60 shadow-lg"
+          />
+        ))}
+      </div>
+    </div>
+  ),
+},
+
     {
       title: "Ekhora Scapes",
       content: (
@@ -272,7 +273,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Creative landscape and architectural solutions that elevate outdoor spaces.
           </p>
-          <VisitButton to="/projects/ekhora-scapes" />
+          <VisitButton to="/ekhora" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -298,7 +299,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Comfortable home stays and wellness centers for relaxation and rejuvenation.
           </p>
-          <VisitButton to="https://wellnesscenter-six.vercel.app/" />
+          <VisitButton to="/wellnes" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -324,7 +325,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Solar energy solutions for clean, renewable power.
           </p>
-          <VisitButton to="https://solar-two-nu.vercel.app/" />
+          <VisitButton to="solar" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -376,7 +377,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Water purification solutions for safe, sustainable living.
           </p>
-          <VisitButton to="https://pureflow-xi.vercel.app/" />
+          <VisitButton to="/pureflow" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
@@ -402,7 +403,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Digital solutions and innovative technology services for modern businesses.
           </p>
-          <VisitButton to="https://itservice-92jh.vercel.app/" />
+          <VisitButton to="/it" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
