@@ -1,11 +1,33 @@
-
 import React, { useState } from "react";
 
 const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
+  const toggleServices = () => setServicesOpen(!servicesOpen);
+
+  const services = [
+    { name: "Old School", link: "oldschool" },
+  
+  
+    { name: "Trendsetter", link: "trendsetter" },
+    { name: "Lubna's Dental Studio", link: "lubnas" },
+    { name: "speech", link: "speech" },
+    { name: "homeappliances", link: "homeappliances" },
+
+    { name: "Compliment", link: "compliment" },
+    { name: "Pots & Pets", link: "#pots-pets" },
+    { name: "realtors", link: "realtors" },
+    { name: "coworking", link: "coworking" },
+    { name: "Ekhora Scapes", link: "#ekhora-scapes" },
+    { name: "wellnes", link: "wellnes" },
+    { name: "Solar", link: "solar" },
+    { name: "EV Charging Station", link: "#ev-charging" },
+    { name: "Pureflow", link: "#pureflow" },
+    { name: "Ekho Digix", link: "#ekho-digix" }
+  ];
 
   return (
     <section className="relative flex flex-col items-center pb-16 pt-8 text-white"
@@ -30,6 +52,31 @@ const HeroSection = () => {
               <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">{item}</span>
             </a>
           ))}
+          
+          <div className="relative">
+            <button onClick={toggleServices} className="relative overflow-hidden h-6 group flex items-center gap-1">
+              <span className="block group-hover:-translate-y-full transition-transform duration-300">Services</span>
+              <span className="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Services</span>
+              <svg className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            
+            {servicesOpen && (
+              <div className="absolute top-full left-0 mt-2 bg-slate-900 border border-slate-700 rounded-lg shadow-xl min-w-[240px] py-2 z-50">
+                {services.map((service) => (
+                  <a
+                    key={service.name}
+                    href={service.link}
+                    className="block px-4 py-2 hover:bg-slate-800 hover:text-[#FFD700] transition-colors"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    {service.name}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="hidden ml-14 md:flex items-center gap-4">
@@ -49,10 +96,35 @@ const HeroSection = () => {
         </button>
 
         {/* Mobile Menu */}
-        <div className={`absolute top-0 text-base left-0 bg-black w-full h-full flex-col items-center justify-center gap-4 transition-all ${menuOpen ? "flex" : "hidden"}`}>
+        <div className={`absolute top-0 text-base left-0 bg-black w-full h-full flex-col items-center justify-center gap-4 transition-all overflow-y-auto ${menuOpen ? "flex" : "hidden"}`}>
           {["Products", "Customer Stories", "Pricing", "Docs"].map((item) => (
             <a key={item} onClick={closeMenu} className="hover:text-[#FFD700]" href="#">{item}</a>
           ))}
+          
+          <div className="flex flex-col items-center gap-2">
+            <button onClick={toggleServices} className="hover:text-[#FFD700] flex items-center gap-1">
+              Services
+              <svg className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            
+            {servicesOpen && (
+              <div className="flex flex-col gap-2 text-sm">
+                {services.map((service) => (
+                  <a 
+                    key={service.name} 
+                    href={service.link}
+                    onClick={closeMenu} 
+                    className="hover:text-[#FFD700] text-slate-300"
+                  >
+                    {service.name}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+          
           <button onClick={closeMenu} className="border border-[#FFD700] hover:bg-[#FFD700] px-4 py-2 rounded-full text-sm font-medium text-black transition">
             Contact
           </button>
