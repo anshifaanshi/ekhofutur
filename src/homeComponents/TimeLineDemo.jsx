@@ -376,7 +376,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
             Water purification solutions for safe, sustainable living.
           </p>
-          <VisitButton to="/projects/pure-flow" />
+          <VisitButton to="https://pureflow-xi.vercel.app/" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://assets.aceternity.com/templates/startup-1.webp",
