@@ -6,6 +6,8 @@ import Realtors from "./Realtors";
 import HomePage from "./working";
 import Ev from "./Ev";
 import RedirectPage from "./RedirectPage";
+import AboutUs from "./AboutUs";
+import Contact from "./Contact";
 function App() {
   return (
     <Router>
@@ -29,6 +31,8 @@ function App() {
         <Route path='/lubnas' element={<RedirectPage/>}/>
         <Route path='/trendsetter' element={<RedirectPage/>}/>
         <Route path='/oldschool' element={<RedirectPage/>}/>
+        <Route path='/aboutus' element={<AboutUs/>}/>
+        <Route path='/contact' element={<Contact/>}/>
       </Routes>
     </Router>
   );
