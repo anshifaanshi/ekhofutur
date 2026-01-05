@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Navbar Component
 const  Navbar = () => {
@@ -50,19 +51,19 @@ const  Navbar = () => {
 
         <div className="flex flex-col md:flex-row p-12 h-full overflow-y-auto">
           <div className="flex flex-col space-y-6">
-            {['Home', 'About', 'Product'].map(item => (
-              <a key={item} href="#" className="text-white text-5xl md:text-7xl font-bold hover:opacity-50 transition-opacity">{item}</a>
-            ))}
+            <Link to="/" className="text-white text-5xl md:text-7xl font-bold hover:opacity-50 transition-opacity">Home</Link>
+            <Link to="/aboutus" className="text-white text-5xl md:text-7xl font-bold hover:opacity-50 transition-opacity">About</Link>
+            <Link to="/product" className="text-white text-5xl md:text-7xl font-bold hover:opacity-50 transition-opacity">Product</Link>
             <button onClick={() => setShowServices(!showServices)} className="text-white text-5xl md:text-7xl font-bold text-left flex items-center">
               Services <ChevronRight className={`ml-4 transform ${showServices ? 'rotate-90' : ''}`} />
             </button>
-            <a href="#" className="text-white text-5xl md:text-7xl font-bold">Contact</a>
+            <Link to="/contact" className="text-white text-5xl md:text-7xl font-bold hover:opacity-50 transition-opacity">Contact</Link>
           </div>
 
           {showServices && (
             <div className="mt-10 md:mt-0 md:ml-20 grid grid-cols-1 md:grid-cols-2 gap-4 pb-20">
               {services.map((s, i) => (
-                <a key={i} href={s.link} className="text-gray-400 text-xl hover:text-white">{s.name}</a>
+                <Link key={i} to={s.link} className="text-gray-400 text-xl hover:text-white">{s.name}</Link>
               ))}
             </div>
           )}
@@ -342,8 +343,8 @@ const Home = () => {
       </div>
 
       {/* Bottom Left - Tagline */}
-      <div className="absolute bottom-20 left-16 z-40">
-        <div className="hidden md:block text-white/60 text-sm tracking-widest font-light">
+      <div className="hidden md:block absolute bottom-20 left-16 z-40">
+        <div className="text-white/60 text-sm tracking-widest font-light">
           DIVERSIFIED EXCELLENCE • UNIFIED VISION
         </div>
       </div>
