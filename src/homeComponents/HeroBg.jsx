@@ -71,6 +71,7 @@ const  Navbar = () => {
     </>
   );
 };
+
 // Home Component
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -321,8 +322,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Slide Counter - Right Side */}
-      <div className="absolute top-1/2 right-12 transform -translate-y-1/2 text-white z-40">
+      {/* Slide Counter - Right Side - Hidden on mobile */}
+      <div className="hidden md:block absolute top-1/2 right-12 transform -translate-y-1/2 text-white z-40">
         <div className="text-right">
           <div 
             className="text-6xl font-bold mb-2 transition-all duration-700" 
@@ -342,7 +343,7 @@ const Home = () => {
 
       {/* Bottom Left - Tagline */}
       <div className="absolute bottom-20 left-16 z-40">
-        <div className="text-white/60 text-sm tracking-widest font-light">
+        <div className="hidden md:block text-white/60 text-sm tracking-widest font-light">
           DIVERSIFIED EXCELLENCE • UNIFIED VISION
         </div>
       </div>

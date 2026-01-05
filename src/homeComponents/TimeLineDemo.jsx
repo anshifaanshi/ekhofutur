@@ -136,7 +136,7 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Home Appliances",
+      title: "Spices",
       content: (
         <div>
           <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
