@@ -1,9 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Timeline } from "./TimeLine";
+
+// Simple single-column Timeline component
+function Timeline({ data }) {
+  return (
+    <div className="max-w-4xl mx-auto px-4">
+      <div className="space-y-8">
+        {data.map((item, index) => (
+          <div key={index} className="relative pl-8 border-l-2 border-[#FFD700] pb-8">
+            {/* Timeline dot */}
+            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FFD700] border-4 border-white"></div>
+            
+            {/* Content */}
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+              <h3 className="text-3xl font-bold text-black mb-4">{item.title}</h3>
+              {item.content}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function TimelineDemo() {
-  // VisitButton supports internal + external links automatically
   const VisitButton = ({ to }) => {
     const isExternal = to.startsWith("http");
 
@@ -35,7 +55,7 @@ export function TimelineDemo() {
       title: "Old School",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Bringing back the classic touch with vintage designs and traditional workflows.
           </p>
           <VisitButton to="/oldschool" />
@@ -61,7 +81,7 @@ export function TimelineDemo() {
       title: "Trend Setter",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Innovative and ahead of the curve, we create designs that set trends in the industry.
           </p>
           <VisitButton to="/trendsetter" />
@@ -87,7 +107,7 @@ export function TimelineDemo() {
       title: "Lubnas Dental Studio",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Creating modern dental solutions with clean, professional, and approachable aesthetics.
           </p>
           <VisitButton to="/lubnas" />
@@ -113,7 +133,7 @@ export function TimelineDemo() {
       title: "Hopeful Steps",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Empowering growth and new beginnings through thoughtful services and design.
           </p>
           <VisitButton to="/speech" />
@@ -139,7 +159,7 @@ export function TimelineDemo() {
       title: "Spices",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             High-quality, innovative home appliances designed for modern lifestyles.
           </p>
           <VisitButton to="/homeappliances" />
@@ -165,7 +185,7 @@ export function TimelineDemo() {
       title: "Compliment",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Enhancing spaces and products with thoughtful design and attention to detail.
           </p>
           <VisitButton to="/compliment" />
@@ -191,7 +211,7 @@ export function TimelineDemo() {
       title: "Pots & Pans",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Quality cookware for modern kitchens, blending style and functionality.
           </p>
           <VisitButton to="/projects/pots-pans" />
@@ -217,7 +237,7 @@ export function TimelineDemo() {
       title: "Builders & Realtors",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Expertly crafted real estate solutions for modern urban and residential developments.
           </p>
           <VisitButton to="/realtors" />
@@ -240,37 +260,36 @@ export function TimelineDemo() {
       ),
     },
     {
-  title: "Co Working Space",
-  content: (
-    <div>
-      <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
-        Collaborative and vibrant co-working environments for creative and professional minds.
-      </p>
-      <VisitButton to="/coworking" />
-      <div className="grid grid-cols-2 gap-4">
-        {[
-          "https://assets.aceternity.com/templates/startup-1.webp",
-          "https://assets.aceternity.com/templates/startup-2.webp",
-          "https://assets.aceternity.com/templates/startup-3.webp",
-          "https://assets.aceternity.com/templates/startup-4.webp",
-        ].map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt="Co Working Space"
-            className="h-20 w-full rounded-lg object-cover md:h-44 lg:h-60 shadow-lg"
-          />
-        ))}
-      </div>
-    </div>
-  ),
-},
-
+      title: "Co Working Space",
+      content: (
+        <div>
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
+            Collaborative and vibrant co-working environments for creative and professional minds.
+          </p>
+          <VisitButton to="/coworking" />
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              "https://assets.aceternity.com/templates/startup-1.webp",
+              "https://assets.aceternity.com/templates/startup-2.webp",
+              "https://assets.aceternity.com/templates/startup-3.webp",
+              "https://assets.aceternity.com/templates/startup-4.webp",
+            ].map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt="Co Working Space"
+                className="h-20 w-full rounded-lg object-cover md:h-44 lg:h-60 shadow-lg"
+              />
+            ))}
+          </div>
+        </div>
+      ),
+    },
     {
       title: "Ekhora Scapes",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Creative landscape and architectural solutions that elevate outdoor spaces.
           </p>
           <VisitButton to="/ekhora" />
@@ -296,7 +315,7 @@ export function TimelineDemo() {
       title: "Home Stays & Wellness center",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Comfortable home stays and wellness centers for relaxation and rejuvenation.
           </p>
           <VisitButton to="/wellnes" />
@@ -322,7 +341,7 @@ export function TimelineDemo() {
       title: "Solar",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Solar energy solutions for clean, renewable power.
           </p>
           <VisitButton to="solar" />
@@ -348,7 +367,7 @@ export function TimelineDemo() {
       title: "EV Charging Stations",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             EV charging stations for sustainable transportation.
           </p>
           <VisitButton to="/ev" />
@@ -374,7 +393,7 @@ export function TimelineDemo() {
       title: "Pure Flow",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Water purification solutions for safe, sustainable living.
           </p>
           <VisitButton to="/pureflow" />
@@ -400,7 +419,7 @@ export function TimelineDemo() {
       title: "Ekho Digix",
       content: (
         <div>
-          <p className="mb-4 text-xs font-normal text-neutral-100 md:text-sm">
+          <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Digital solutions and innovative technology services for modern businesses.
           </p>
           <VisitButton to="/it" />
@@ -425,12 +444,7 @@ export function TimelineDemo() {
   ];
 
   return (
-    <div
-      className="relative w-full overflow-clip py-20"
-      style={{
-        background: "linear-gradient(135deg, #000000 0%, #4682B4 100%)",
-      }}
-    >
+    <div className="relative w-full overflow-clip py-20 bg-white">
       <Timeline data={timelineItems} />
     </div>
   );
