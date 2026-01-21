@@ -37,7 +37,7 @@ export default function WhatWeDoSection() {
               50+
             </div>
           </div>
-          <p className="text-sm font-medium text-slate-800">Join our developer community</p>
+          <p className="text-sm font-medium text-slate-800">Join With Ekho Futur</p>
         </div>
       </div>
 

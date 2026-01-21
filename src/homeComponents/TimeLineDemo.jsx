@@ -13,7 +13,7 @@ function Timeline({ data }) {
             
             {/* Content */}
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
-              <h3 className="text-3xl font-bold text-black mb-4">{item.title}</h3>
+              <h3 className="text-5xl font-extrabold text-[#1a1a1a] mb-6 tracking-tight">{item.title}</h3>
               {item.content}
             </div>
           </div>
@@ -61,10 +61,10 @@ export function TimelineDemo() {
           <VisitButton to="/oldschool" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/xCSmHcK2/20260110-135802.avif",
+              "https://i.postimg.cc/MHpvbRXZ/20260110-140148.jpg",
+              "https://i.postimg.cc/TPv1NBhQ/20260110-135904.jpg",
+              "https://i.postimg.cc/pT6t4nqX/20260110-140051.avif",
             ].map((img, index) => (
               <img
                 key={index}
@@ -87,10 +87,10 @@ export function TimelineDemo() {
           <VisitButton to="/trendsetter" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/cHQbMg2n/20260110-111923.avif",
+              "https://i.postimg.cc/JncpBwH2/20260110-111940.avif",
+              "https://i.postimg.cc/gj2HXxWF/20260110-112120.avif",
+              "https://i.postimg.cc/gj2HXxWF/20260110-112120.avif",
             ].map((img, index) => (
               <img
                 key={index}
@@ -113,10 +113,10 @@ export function TimelineDemo() {
           <VisitButton to="/lubnas" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/QdbwvTd6/IMG-2059.avif",
+              "https://i.postimg.cc/gc8MfZMt/IMG-2061.avif",
+              "https://i.postimg.cc/jdRhmknC/IMG-2062.avif",
+              "https://i.postimg.cc/yxsFqkdj/IMG-2067.avif",
             ].map((img, index) => (
               <img
                 key={index}
@@ -217,10 +217,10 @@ export function TimelineDemo() {
           <VisitButton to="/projects/pots-pans" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/xdj8SMyH/IMG-2042.avif",
+              "https://i.postimg.cc/xCw9qzHc/IMG-2050.avif",
+              "https://i.postimg.cc/P5ShYcYh/IMG-2052-(1).avif",
+              "https://i.postimg.cc/4dtrLF7z/IMG-2056.avif",
             ].map((img, index) => (
               <img
                 key={index}
@@ -295,10 +295,10 @@ export function TimelineDemo() {
           <VisitButton to="/ekhora" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/kXWypPgB/20260110-113349.avif",
+              "https://i.postimg.cc/SKn2HcG4/20260110-113458.avif",
+              "https://i.postimg.cc/3J6HnpW9/20260110-113438.avif",
+              "https://i.postimg.cc/SKn2HcG4/20260110-113458.avif",
             ].map((img, index) => (
               <img
                 key={index}
