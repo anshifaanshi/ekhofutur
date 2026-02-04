@@ -191,9 +191,9 @@ export function TimelineDemo() {
           <VisitButton to="/compliment" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
+              "https://i.postimg.cc/brYX6Nj2/IMG-3812.avif",
+              "https://i.postimg.cc/J4yYRBKh/IMG-3814.avif",
+              "https://i.postimg.cc/CLf73pLq/IMG-3815.avif",
               "https://assets.aceternity.com/templates/startup-4.webp",
             ].map((img, index) => (
               <img
@@ -214,7 +214,7 @@ export function TimelineDemo() {
           <p className="mb-4 text-xs font-normal text-gray-600 md:text-sm">
             Quality cookware for modern kitchens, blending style and functionality.
           </p>
-          <VisitButton to="/projects/pots-pans" />
+          <VisitButton to="https://pots-beta.vercel.app/" />
           <div className="grid grid-cols-2 gap-4">
             {[
               "https://i.postimg.cc/xdj8SMyH/IMG-2042.avif",
