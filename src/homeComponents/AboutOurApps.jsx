@@ -3,27 +3,27 @@ import { motion } from "framer-motion";
 export default function AboutOurApps() {
   const sectionData = [
     {
-      title: "Lightning-Fast Performance",
-      description: "Built with speed — minimal load times and optimized.",
+      title: "Diverse Business Portfolio",
+      description: "From fashion to technology, we deliver excellence across multiple industries.",
       image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/aboutSection/flashEmoji.png",
       className: "py-10 border-b border-slate-700 md:py-0 md:border-r md:border-b-0 md:px-10"
     },
     {
-      title: "Beautifully Designed Components",
-      description: "Modern, pixel-perfect UI components ready for any project.",
+      title: "Customer-Centered Solutions",
+      description: "Every service is tailored to meet your unique needs and exceed expectations.",
       image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/aboutSection/colorsEmoji.png",
       className: "py-10 border-b border-slate-700 md:py-0 lg:border-r md:border-b-0 md:px-10"
     },
     {
-      title: "Plug-and-Play Integration",
-      description: "Simple setup with support for React, Next.js and Tailwind CSS.",
+      title: "Innovation Meets Tradition",
+      description: "Blending modern technology with timeless quality in everything we do.",
       image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/aboutSection/puzzelEmoji.png",
       className: "py-10 border-b border-slate-700 md:py-0 md:border-b-0 md:px-10"
     },
   ];
 
   // Split heading for animation
-  const heading = "About Our Apps";
+  const heading = "About Ekho Future";
   const words = heading.split(" ");
   const lastWord = words.pop();
   const firstPart = words.join(" ");
@@ -54,7 +54,7 @@ export default function AboutOurApps() {
       </motion.h2>
 
       <p className="text-center text-slate-300 max-w-2xl mb-12">
-        A visual collection of our most recent works — each piece crafted with intention, emotion, and style.
+        A diverse collection of businesses united under one vision — delivering quality, innovation, and exceptional service across every industry we serve.
       </p>
 
       <div className="relative max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 md:px-0 gap-8">

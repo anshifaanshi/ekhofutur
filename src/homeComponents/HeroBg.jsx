@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Navbar Component
-const  Navbar = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
 
@@ -29,9 +29,12 @@ const  Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
         <div className="flex items-center justify-between px-8 py-6">
-          <div className="flex items-center space-x-3 text-white">
-            <span className="text-3xl font-bold tracking-wider">EF</span>
-            <span className="text-sm tracking-widest font-light">EKHO FUTURE</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="https://i.postimg.cc/d0MgKy17/ef-jpg.jpg" 
+              alt="Ekho Future Logo" 
+              className="h-12 w-auto object-contain bg-white rounded-lg p-1.5"
+            />
           </div>
           <button onClick={() => setIsMenuOpen(true)} className="text-white flex items-center space-x-2">
             <Menu size={28} />
@@ -41,8 +44,14 @@ const  Navbar = () => {
       </nav>
 
       <div className={`fixed inset-0 z-[60] bg-[#111] transition-all duration-500 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-         <div className="flex items-center justify-between px-8 py-6">
-          <div className="text-white text-3xl font-bold">EF</div>
+        <div className="flex items-center justify-between px-8 py-6">
+          <div className="flex items-center">
+            <img 
+              src="https://i.postimg.cc/d0MgKy17/ef-jpg.jpg" 
+              alt="Ekho Future Logo" 
+              className="h-10 w-auto object-contain bg-white rounded-lg p-1"
+            />
+          </div>
           <button onClick={() => { setIsMenuOpen(false); setShowServices(false); }} className="text-white flex items-center space-x-2">
             <X size={28} />
             <span className="text-sm tracking-widest font-light">CLOSE</span>
@@ -323,7 +332,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Slide Counter - Right Side - Hidden on mobile */}
+      {/* Slide Counter - Right Side */}
       <div className="hidden md:block absolute top-1/2 right-12 transform -translate-y-1/2 text-white z-40">
         <div className="text-right">
           <div 
@@ -360,7 +369,6 @@ const Home = () => {
           <ChevronLeft size={48} strokeWidth={1.5} />
         </button>
         
-        {/* Progress Bar */}
         <div className="w-32 h-[2px] bg-white/30 overflow-hidden">
           <div 
             className="h-full bg-white transition-all duration-300"
@@ -380,7 +388,7 @@ const Home = () => {
         </button>
       </div>
 
-      {/* WhatsApp Button */}
+      {/* WhatsApp Button - CORRECTED TAG BELOW */}
       <a
         href="https://wa.me/"
         target="_blank"
@@ -399,102 +407,39 @@ const Home = () => {
 
       <style>{`
         @keyframes liquidFlowRight1 {
-          0% {
-            transform: translateX(-120%) scale(0.8) rotate(-5deg);
-            opacity: 0;
-          }
-          30% {
-            opacity: 0.6;
-          }
-          100% {
-            transform: translateX(120%) scale(1.2) rotate(5deg);
-            opacity: 0;
-          }
+          0% { transform: translateX(-120%) scale(0.8) rotate(-5deg); opacity: 0; }
+          30% { opacity: 0.6; }
+          100% { transform: translateX(120%) scale(1.2) rotate(5deg); opacity: 0; }
         }
-
         @keyframes liquidFlowLeft1 {
-          0% {
-            transform: translateX(120%) scale(0.8) rotate(5deg);
-            opacity: 0;
-          }
-          30% {
-            opacity: 0.6;
-          }
-          100% {
-            transform: translateX(-120%) scale(1.2) rotate(-5deg);
-            opacity: 0;
-          }
+          0% { transform: translateX(120%) scale(0.8) rotate(5deg); opacity: 0; }
+          30% { opacity: 0.6; }
+          100% { transform: translateX(-120%) scale(1.2) rotate(-5deg); opacity: 0; }
         }
-
         @keyframes liquidFlowRight2 {
-          0% {
-            transform: translateX(-100%) translateY(-10%) scale(0.9) skewX(-10deg);
-            opacity: 0;
-          }
-          40% {
-            opacity: 0.5;
-          }
-          100% {
-            transform: translateX(100%) translateY(10%) scale(1.1) skewX(10deg);
-            opacity: 0;
-          }
+          0% { transform: translateX(-100%) translateY(-10%) scale(0.9) skewX(-10deg); opacity: 0; }
+          40% { opacity: 0.5; }
+          100% { transform: translateX(100%) translateY(10%) scale(1.1) skewX(10deg); opacity: 0; }
         }
-
         @keyframes liquidFlowLeft2 {
-          0% {
-            transform: translateX(100%) translateY(-10%) scale(0.9) skewX(10deg);
-            opacity: 0;
-          }
-          40% {
-            opacity: 0.5;
-          }
-          100% {
-            transform: translateX(-100%) translateY(10%) scale(1.1) skewX(-10deg);
-            opacity: 0;
-          }
+          0% { transform: translateX(100%) translateY(-10%) scale(0.9) skewX(10deg); opacity: 0; }
+          40% { opacity: 0.5; }
+          100% { transform: translateX(-100%) translateY(10%) scale(1.1) skewX(-10deg); opacity: 0; }
         }
-
         @keyframes liquidFlowRight3 {
-          0% {
-            transform: translateX(-110%) translateY(5%) scale(1) skewX(-15deg);
-            opacity: 0;
-          }
-          50% {
-            opacity: 0.4;
-          }
-          100% {
-            transform: translateX(110%) translateY(-5%) scale(1.15) skewX(15deg);
-            opacity: 0;
-          }
+          0% { transform: translateX(-110%) translateY(5%) scale(1) skewX(-15deg); opacity: 0; }
+          50% { opacity: 0.4; }
+          100% { transform: translateX(110%) translateY(-5%) scale(1.15) skewX(15deg); opacity: 0; }
         }
-
         @keyframes liquidFlowLeft3 {
-          0% {
-            transform: translateX(110%) translateY(5%) scale(1) skewX(15deg);
-            opacity: 0;
-          }
-          50% {
-            opacity: 0.4;
-          }
-          100% {
-            transform: translateX(-110%) translateY(-5%) scale(1.15) skewX(-15deg);
-            opacity: 0;
-          }
+          0% { transform: translateX(110%) translateY(5%) scale(1) skewX(15deg); opacity: 0; }
+          50% { opacity: 0.4; }
+          100% { transform: translateX(-110%) translateY(-5%) scale(1.15) skewX(-15deg); opacity: 0; }
         }
-
         @keyframes rippleEffect {
-          0% {
-            transform: scale(0.5);
-            opacity: 0.8;
-          }
-          50% {
-            transform: scale(1.5);
-            opacity: 0.3;
-          }
-          100% {
-            transform: scale(2.5);
-            opacity: 0;
-          }
+          0% { transform: scale(0.5); opacity: 0.8; }
+          50% { transform: scale(1.5); opacity: 0.3; }
+          100% { transform: scale(2.5); opacity: 0; }
         }
       `}</style>
     </div>

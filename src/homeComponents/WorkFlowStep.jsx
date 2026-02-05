@@ -4,30 +4,30 @@ import { motion } from "framer-motion";
 const steps = [
   {
     id: 1,
-    title: "Start with a prompt",
-    description: "Start with a simple prompt describing what you want your agent to do. Our builder interprets your idea and creates the structure for you in seconds",
-    link: "https://i.postimg.cc/Rh6rYP1W/analysis-strategy-study-information-business-planning.jpg",
-    image: "https://i.postimg.cc/QM2ntXcx/visual-design-pl9Drj-AMV6I-unsplash.jpg",
+    title: "Explore Our Businesses",
+    description: "Discover our diverse portfolio spanning fashion boutiques, dental care, IT solutions, EV charging stations, and more. Each venture is crafted to serve you better.",
+    link: "",
+    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80",
   },
   {
     id: 2,
-    title: "Adjust and personalize",
-    description: "Adjust tasks, actions and integrations. Add personality, rules and data sources to make the agent work exactly the way you want.",
+    title: "Experience Quality Service",
+    description: "Whether you're shopping for style, enhancing your smile, powering your vehicle, or upgrading your technology, we deliver excellence at every touchpoint.",
     link: "",
-    image: "https://i.postimg.cc/Rh6rYP1W/analysis-strategy-study-information-business-planning.jpg",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
   },
   {
     id: 3,
-    title: "Launch & Automate",
-    description: "Deploy your agent and let it run. It executes tasks autonomously, reports results, and continues working in the background.",
-    link: "https://prebuiltui.com/templates",
-    image: "https://i.postimg.cc/W1K5W2Wr/campaign-creators-ARW7Ic7MSAM-unsplash.jpg",
+    title: "Grow with Innovation",
+    description: "Join us on a journey toward the future. From sustainable energy to cutting-edge digital solutions, Ekho Future is here to empower your lifestyle and business.",
+    link: "",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
   },
 ];
 
 export default function WorkflowSteps() {
   // Split heading for animation
-  const heading = "From idea to autonomous agent quickly and effortlessly";
+  const heading = "Your Partner Across Industries, Powered by Excellence";
   const words = heading.split(" ");
   const lastWord = words.pop();
   const firstPart = words.join(" ");
@@ -55,7 +55,7 @@ export default function WorkflowSteps() {
       </motion.h2>
 
       <p className="text-center text-slate-300 max-w-2xl mb-20">
-        Empower your business with AI agents that optimize processes and accelerate performance.
+        From retail to technology, dental care to sustainable energy — Ekho Future brings together diverse services under one commitment to quality.
       </p>
 
       <div className="relative space-y-20 md:space-y-30 w-full max-w-6xl">

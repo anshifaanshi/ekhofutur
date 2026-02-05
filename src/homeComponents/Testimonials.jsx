@@ -4,51 +4,51 @@ import { motion } from "framer-motion";
 const Testimonials = () => {
   const data = [
     {
-      review: 'Super clean and easy to use. These Tailwind + React components saved me hours of dev time and countless lines of extra code!',
-      name: 'Richard Nelson',
-      about: 'Founder & CEO',
+      review: 'Ekho Future transformed our office with their dental studio. Professional service, modern equipment, and a team that truly cares about patient comfort.',
+      name: 'Sarah Ahmed',
+      about: 'Dental Studio Client',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
     },
     {
-      review: 'The design quality is top-notch. Perfect balance between simplicity and style. Highly recommend for any creative developer!',
-      name: 'Sophia Martinez',
-      about: 'Founder & CEO',
+      review: 'The EV charging stations are incredibly convenient and reliable. Fast charging, easy payment, and always well-maintained. Highly recommend!',
+      name: 'Michael Chen',
+      about: 'EV Charging Customer',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
     },
     {
-      review: 'Absolutely love the reusability of these components. My workflow feels 10x faster now with cleaner and more consistent layouts.',
-      name: 'Ethan Roberts',
-      about: 'Founder & CEO',
+      review: 'Found the perfect dress for my sister\'s wedding at their boutique. The collection is stunning and the staff made shopping a delightful experience.',
+      name: 'Amira Hassan',
+      about: 'Fashion Boutique Customer',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
     },
     {
-      review: 'Clean, elegant, and efficient. These components are a dream for any modern web developer who values beautiful code.',
-      name: 'Isabella Kim',
-      about: 'Founder & CEO',
+      review: 'Their IT solutions team helped modernize our entire business infrastructure. Efficient, knowledgeable, and always available when we need support.',
+      name: 'David Williams',
+      about: 'IT Services Client',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60',
     },
     {
-      review: "I've tried dozens of UI kits, but this one just feels right. Everything works seamlessly and looks incredibly polished.",
-      name: 'Liam Johnson',
-      about: 'Founder & CEO',
+      review: 'Ekho Future\'s landscape design completely transformed our outdoor space. Creative vision meets exceptional execution. Absolutely thrilled with the results!',
+      name: 'Fatima Al-Mansoori',
+      about: 'Ekhora Scapes Client',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop',
     },
     {
-      review: 'Brilliantly structured components with clean, modern styling. Makes development a joy and design updates super quick.',
-      name: 'Ava Patel',
-      about: 'Founder & CEO',
+      review: 'From cookware to home essentials, their product quality is outstanding. Great prices, beautiful designs, and customer service that goes above and beyond.',
+      name: 'James Martinez',
+      about: 'Retail Customer',
       rating: 5,
       image: 'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage1.png',
     },
   ];
 
   // Split heading for gradient animation
-  const heading = "Here what our trusted users say about our best AI agents.";
+  const heading = "Hear what our valued customers say about their experiences.";
   const words = heading.split(" ");
   const lastWord = words.pop();
   const firstPart = words.join(" ");
@@ -76,7 +76,7 @@ const Testimonials = () => {
       </motion.h2>
 
       <p className="text-center text-slate-300 max-w-2xl mb-12">
-        Empower your business with AI agents that optimize processes and accelerate performance.
+        Real stories from real customers across our diverse range of services — from fashion and dental care to IT solutions and sustainable energy.
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -103,7 +103,7 @@ const Testimonials = () => {
               />
             </div>
 
-            <p className="text-slate-200 mb-3">“{item.review}”</p>
+            <p className="text-slate-200 mb-3">"{item.review}"</p>
             <p className="text-gray-300 font-semibold">- {item.name}</p>
           </motion.div>
         ))}

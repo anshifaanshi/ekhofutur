@@ -15,6 +15,7 @@ const mapping = {
   '/lubnas':"https://coruscating-blancmange-28365c.netlify.app/",
   "/trendsetter":"https://trendsetter-three.vercel.app/",
   "/oldschool" :"https://oldschool-three.vercel.app/",
+  "/pots-pants" :"https://pots-beta.vercel.app/",
   // add all other routes here
 };
 

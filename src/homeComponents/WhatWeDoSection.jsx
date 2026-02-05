@@ -13,7 +13,7 @@ export default function WhatWeDoSection() {
       <div className="relative shadow-2xl shadow-steelBlue/40 rounded-2xl overflow-hidden shrink-0">
         <img
           className="max-w-sm w-full object-cover rounded-2xl"
-          src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?q=80&w=451&h=451&auto=format&fit=crop"
+          src="https://i.postimg.cc/rw7qbsxt/business-people-team-up-together-work.jpg"
           alt=""
         />
         <div className="flex items-center gap-1 max-w-72 absolute bottom-8 left-8 bg-white p-4 rounded-xl">
@@ -63,18 +63,19 @@ export default function WhatWeDoSection() {
         </motion.h1>
 
         <div className="w-24 h-[3px] rounded-full bg-gradient-to-r from-steelBlue to-[#DDD9FF]"></div>
-        <p className="mt-8">
-          PrebuiltUI helps you build faster by transforming your design vision into fully functional,
-          production-ready UI components.
-        </p>
-        <p className="mt-4">
-          Whether you're launching a SaaS app, landing page, or dashboard, our collection of Tailwind
-          CSS components is crafted to boost your development speed and improve user experience.
-        </p>
-        <p className="mt-4">
-          From UI design systems to automation-ready layouts, PrebuiltUI empowers you to build beautifully
-          and scale effortlessly.
-        </p>
+       <p className="mt-8">
+  Ekho Future helps you succeed across multiple industries by delivering innovative solutions
+  tailored to your unique needs, from fashion retail to cutting-edge technology.
+</p>
+<p className="mt-4">
+  Whether you're shopping for the latest styles at our dress boutique, enhancing smiles at
+  our dental studio, charging your electric vehicle, or transforming your business with our
+  IT solutions, we're here to serve you.
+</p>
+<p className="mt-4">
+  From personalized customer care to forward-thinking services, Ekho Future empowers you to
+  live better and embrace the future with confidence.
+</p>
         <button className="flex items-center gap-2 mt-8 hover:opacity-90 transition btn py-3 px-8 rounded-full text-white bg-steelBlue">
           <span>Read more</span>
           <ArrowRightIcon className="size-5" />

@@ -18,7 +18,7 @@ export default function Example() {
                     
                     {/* Logo + Description */}
                     <div className="sm:col-span-2 lg:col-span-1">
-                        <a href="https://prebuiltui.com">
+                        <a href="/">
                             <svg width="157" height="40" viewBox="0 0 157 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path 
                                     d="M47.904 28.28q-1.54 0-2.744-.644a5.1 5.1 0 0 1-1.904-1.82q-.672-1.148-.672-2.604v-3.864q0-1.456.7-2.604a4.9 4.9 0 0 1 1.904-1.792q1.204-.672 2.716-.672 1.82 0 3.276.952a6.44 6.44 0 0 1 2.324 2.52q.868 1.567.868 3.556 0 1.96-.868 3.556a6.5 6.5 0 0 1-2.324 2.492q-1.456.924-3.276.924"
@@ -35,30 +35,28 @@ export default function Example() {
                         </a>
 
                         <p className="text-sm/7 mt-6 text-white/90">
-                            PrebuiltUI is a free and open-source UI component library with over 300+ beautifully crafted components.
+                            Ekho Future is your trusted partner across multiple industries — from fashion and dental care to IT solutions, EV charging, and sustainable living products.
                         </p>
                     </div>
 
                     {/* Company Section */}
                     <div className="flex flex-col lg:items-center lg:justify-center">
                         <div className="flex flex-col text-sm space-y-2.5">
-                            <h2 className="font-semibold mb-5 text-white">Company</h2>
-                            <a className="hover:text-yellow-300 transition" href="#">About us</a>
-                            <a className="hover:text-yellow-300 transition" href="#">
-                                Careers
-                                <span className="text-xs text-black bg-yellow-400 rounded-md ml-2 px-2 py-1">We’re hiring!</span>
-                            </a>
-                            <a className="hover:text-yellow-300 transition" href="#">Contact us</a>
-                            <a className="hover:text-yellow-300 transition" href="#">Privacy policy</a>
+                            <h2 className="font-semibold mb-5 text-white">Our Services</h2>
+                            <a className="hover:text-yellow-300 transition" href="/oldschool">Fashion Boutiques</a>
+                            <a className="hover:text-yellow-300 transition" href="/lubnas">Dental Studio</a>
+                            <a className="hover:text-yellow-300 transition" href="/it">IT Solutions</a>
+                            <a className="hover:text-yellow-300 transition" href="/ev">EV Charging Stations</a>
+                            <a className="hover:text-yellow-300 transition" href="/ekhora">Landscape Design</a>
                         </div>
                     </div>
 
                     {/* Newsletter */}
                     <div>
-                        <h2 className="font-semibold text-white mb-5">Subscribe to our newsletter</h2>
+                        <h2 className="font-semibold text-white mb-5">Stay Connected</h2>
                         <div className="text-sm space-y-6 max-w-sm">
                             <p className="text-white/90">
-                                The latest news, articles, and resources, sent to your inbox weekly.
+                                Get the latest updates on our services, exclusive offers, and industry insights delivered to your inbox.
                             </p>
 
                             <div className="flex items-center justify-center gap-2 p-2 rounded-md bg-white/10">
@@ -78,10 +76,10 @@ export default function Example() {
                 {/* Footer bottom */}
                 <p className="py-4 text-center border-t mt-6 border-white/20 text-white/80">
                     Copyright 2025 © 
-                    <a className="ml-1 text-yellow-300 hover:underline" href="https://prebuiltui.com">
-                        PrebuiltUI
+                    <a className="ml-1 text-yellow-300 hover:underline" href="/">
+                        Ekho Future
                     </a> 
-                    All Right Reserved.
+                    All Rights Reserved.
                 </p>
             </footer>
         </>
