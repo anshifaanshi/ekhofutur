@@ -12,7 +12,7 @@ const mapping = {
   "/compliment":"https://cookware-three.vercel.app/",
   "/homeappliances":"https://homeappliances-one.vercel.app/",
   "/speech":"https://speech-iota-one.vercel.app/",
-  '/lubnas':"https://coruscating-blancmange-28365c.netlify.app/",
+  '/lubnas':"https://papaya-sherbet-d9354c.netlify.app/",
   "/trendsetter":"https://trendsetter-three.vercel.app/",
   "/oldschool" :"https://oldschool-three.vercel.app/",
   "/pots-pants" :"https://pots-beta.vercel.app/",
