@@ -83,7 +83,7 @@ const Testimonials = () => {
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className="relative w-full max-w-88 p-6 rounded-xl border border-yellow-400 bg-black/20 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_15px_#facc15,0_0_25px_#fbbf24,0_0_40px_#f59e0b]"
+            className="relative w-full max-w-88 p-6 rounded-xl border border-yellow-400 bg-black/20 shadow-lg transition-all duration-300 hover:scale-105 hover:border-yellow-300 hover:shadow-xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -94,7 +94,7 @@ const Testimonials = () => {
 
             <div className="relative flex items-center justify-between mb-4">
               <div>
-                <p className="font-medium text-yellow-400">{item.about}</p>
+                <p className="font-medium text-white">{item.about}</p>
               </div>
               <img
                 className="w-12 h-12 rounded-full border-2 border-yellow-400"
@@ -103,8 +103,8 @@ const Testimonials = () => {
               />
             </div>
 
-            <p className="text-slate-200 mb-3">"{item.review}"</p>
-            <p className="text-gray-300 font-semibold">- {item.name}</p>
+            <p className="text-black mb-3">"{item.review}"</p>
+            <p className="text-white font-semibold">- {item.name}</p>
           </motion.div>
         ))}
       </div>

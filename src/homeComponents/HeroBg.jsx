@@ -31,9 +31,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-8 py-6">
           <div className="flex items-center space-x-3">
             <img 
-              src="https://i.postimg.cc/d0MgKy17/ef-jpg.jpg" 
+              src="https://i.postimg.cc/pVSnWZdk/B-AND-W-(2).png" 
               alt="Ekho Future Logo" 
-              className="h-12 w-auto object-contain bg-white rounded-lg p-1.5"
+              className="h-20 w-auto object-contain bg-white rounded-lg p-1.5"
             />
           </div>
           <button onClick={() => setIsMenuOpen(true)} className="text-white flex items-center space-x-2">
@@ -49,7 +49,7 @@ const Navbar = () => {
             <img 
               src="https://i.postimg.cc/d0MgKy17/ef-jpg.jpg" 
               alt="Ekho Future Logo" 
-              className="h-10 w-auto object-contain bg-white rounded-lg p-1"
+              className="h-16 w-auto object-contain bg-white rounded-lg p-1"
             />
           </div>
           <button onClick={() => { setIsMenuOpen(false); setShowServices(false); }} className="text-white flex items-center space-x-2">
@@ -388,7 +388,7 @@ const Home = () => {
         </button>
       </div>
 
-      {/* WhatsApp Button - CORRECTED TAG BELOW */}
+      {/* WhatsApp Button */}
       <a
         href="https://wa.me/"
         target="_blank"

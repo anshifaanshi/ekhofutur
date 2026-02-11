@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from './realtorscomponents/HeroSection'
+
 
 import PropertyTypesSection from './realtorscomponents/PropertyTypeSection'
 import AboutSection from './realtorscomponents/AboutSection'
