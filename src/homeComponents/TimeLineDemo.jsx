@@ -242,10 +242,10 @@ export function TimelineDemo() {
           <VisitButton to="/realtors" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+              "https://i.postimg.cc/C1TkW2Sn/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
+              "https://i.postimg.cc/fR199P3P/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+              "https://i.postimg.cc/J7KHq0D3/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
             ].map((img, index) => (
               <img
                 key={index}
@@ -320,10 +320,10 @@ export function TimelineDemo() {
           <VisitButton to="/wellnes" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/d0vJpRgV/Whats-App-Image-2026-03-10-at-2-22-33-PM.jpg",
+              "https://i.postimg.cc/v8jbbwpy/Whats-App-Image-2026-03-10-at-2-22-33-PM.jpg",
+              "https://i.postimg.cc/br2Xsd4g/Whats-App-Image-2026-03-10-at-2-22-33-PM.jpg",
+              "https://i.postimg.cc/hjX41DHj/Whats-App-Image-2026-03-10-at-2-22-33-PM.jpg",
             ].map((img, index) => (
               <img
                 key={index}
@@ -398,10 +398,10 @@ export function TimelineDemo() {
           <VisitButton to="/pureflow" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/HnQg6V3n/Whats-App-Image-2026-03-10-at-3-12-52-PM.jpg",
+              "https://i.postimg.cc/wjWd4K54/Whats-App-Image-2026-03-10-at-3-12-52-PM.jpg",
+              "https://i.postimg.cc/SNkFyQgb/Whats-App-Image-2026-03-10-at-3-12-53-PM.jpg",
+              "https://i.postimg.cc/8P132KCT/Whats-App-Image-2026-03-10-at-3-12-54-PM.jpg",
             ].map((img, index) => (
               <img
                 key={index}
@@ -424,10 +424,10 @@ export function TimelineDemo() {
           <VisitButton to="/it" />
           <div className="grid grid-cols-2 gap-4">
             {[
-              "https://assets.aceternity.com/templates/startup-1.webp",
-              "https://assets.aceternity.com/templates/startup-2.webp",
-              "https://assets.aceternity.com/templates/startup-3.webp",
-              "https://assets.aceternity.com/templates/startup-4.webp",
+              "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
+              "https://i.postimg.cc/Y96nVYcZ/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
+              "https://i.postimg.cc/QM5091MM/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
+              "https://i.postimg.cc/SNvrgD22/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
             ].map((img, index) => (
               <img
                 key={index}
